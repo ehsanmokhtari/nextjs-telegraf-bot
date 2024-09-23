@@ -7,8 +7,7 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 //     },  
 // };  
 
-const handler = async (req : NextApiRequest, res : NextApiResponse) => {  
-    // Expecting POST requests from Telegram  
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {  
     if (req.method === 'POST') {  
         // Pass the update to the bot  
         bot.handleUpdate(req.body, res);  
@@ -17,6 +16,4 @@ const handler = async (req : NextApiRequest, res : NextApiResponse) => {
         res.setHeader('Allow', ['POST']);  
         res.status(405).end(`Method ${req.method} Not Allowed`);  
     }  
-};  
-
-export default handler;  
+}
