@@ -1,10 +1,10 @@
 import bot from '@/bot/bot';  
 
-export const config = {  
-    api: {  
-        bodyParser: false,  
-    },  
-};  
+// export const config = {  
+//     api: {  
+//         bodyParser: false,  
+//     },  
+// };  
 
 const handler = async (req : any, res : any) => {  
     // Expecting POST requests from Telegram  
