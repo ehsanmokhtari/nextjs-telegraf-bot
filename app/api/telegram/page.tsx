@@ -1,4 +1,5 @@
 import bot from '@/bot/bot';  
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 // export const config = {  
 //     api: {  
@@ -6,7 +7,7 @@ import bot from '@/bot/bot';
 //     },  
 // };  
 
-const handler = async (req : any, res : any) => {  
+const handler = async (req : NextApiRequest, res : NextApiResponse) => {  
     // Expecting POST requests from Telegram  
     if (req.method === 'POST') {  
         // Pass the update to the bot  
